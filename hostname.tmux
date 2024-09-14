@@ -21,7 +21,7 @@ hostname_tmux() {
   fi
 
   if hostname_tmux_is_ssh; then
-    HOSTNAME_TMUX+=" ${HOSTNAME_TMUX_SSH_ICON}"
+    HOSTNAME_TMUX+=" ${HOSTNAME_TMUX_SSH_ICON} "
   fi
 
   echo "${HOSTNAME_TMUX}"
