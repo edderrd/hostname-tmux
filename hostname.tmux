@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 HOSTNAME_TMUX_ROOT_ICON=${HOSTNAME_TMUX_ROOT_ICON:-󰏅}
-HOSTNAME_TMUX_SSH_ICON=${HOSTNAME_TMUX_SSH_ICON:-}
+HOSTNAME_TMUX_SSH_ICON=${HOSTNAME_TMUX_SSH_ICON:-}
 
 hostname_tmux_is_ssh() {
   printenv | grep SSH_CLIENT >/dev/null
@@ -10,7 +10,7 @@ hostname_tmux_is_ssh() {
 hostname_tmux() {
   local HOSTNAME_TMUX
 
-  if [ $USERNAME == "root" ]; then
+  if [ "$USERNAME" == "root" ]; then
     HOSTNAME_TMUX+="${HOSTNAME_TMUX_ROOT_ICON} root@"
   fi
 
